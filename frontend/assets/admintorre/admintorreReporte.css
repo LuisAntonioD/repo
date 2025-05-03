@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+  .body {
+    font-family: "Roboto";
+    font-size: 9px;
+    color: #3C4858;
+  }
+
+  .text-mid {
+    font-size: 12px;
+  }
+
+  .text-small {
+    font-size: 6px;
+  }
+  
+  .text-xs {
+    font-size: 5px;
+  }
+
+  .row {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .mt-3 {
+    margin-top: 20px;
+  }
+
+  .m-auto {
+    margin: auto;
+  }
+
+  .mb-1 {
+    margin-bottom: 5px;
+  }
+
+  .gray-bg{
+    font-weight: bold;
+    background-color: #eee;
+  }
+
+  .float-right{
+    float: right;
+  }
+
+  .text-big {
+    font-size: 15px;
+  }
+
+  .text-left{
+    text-align: left;
+  }
+
+  .text-right{
+    text-align: right;
+  }
+
+  .text-center{
+    text-align: center;
+  }
+
+  .text-danger{
+    color: #f00;
+  }
+
+  .border-bottom {
+    border-bottom: 1px solid #333;
+  }
+  
+  .bg-info {
+    background-color: #3793f3;
+    color: #fff;
+  }
+
+  .bg-success {
+    background-color: #4caf50;
+    color: #fff;
+  }
+
+  .bg-warning {
+    background-color: #ffeb3b;
+    color: #3C4858;
+  }
+
+  .bg-danger {
+    background-color: #f44336;
+    color: #fff;
+  }
+
+  .card {
+      border: 1px solid #ccc;
+  }
+
+  .wrap {
+    white-space: pre-wrap;
+    /* CSS3 */
+    white-space: -moz-pre-wrap;
+    /* Firefox */
+    white-space: -pre-wrap;
+    /* Opera <7 */
+    white-space: -o-pre-wrap;
+    /* Opera 7 */
+    word-wrap: break-word;
+    /* IE */
+  }
+  .HeaderFact {
+    padding: 1px 1px 1px 1px;
+    white-space: nowrap;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 9px;
+    font-weight: normal;
+    background-color: #478ac9;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+  .datosFact {
+    font-family: "Roboto";
+    font-size: 9px;
+  }
+  .redCanceladoFact {
+    padding: 1px 1px 1px 1px;
+    white-space: nowrap;
+    text-align: left;
+    color: #fff;
+    font-family: "Roboto";
+    font-size: 8px;
+    font-weight: normal;
+    background-color: #FF0000;
+    vertical-align: bottom;
+    overflow: hidden;
+  }
+  .add-new-page {
+    page-break-before: always; 
+  }
+
+  
+.emisor p, .cliente p{
+    text-align: center;
+    font-size: 6px;
+    color: #000000;
+    font-family: "Roboto";
+    margin-bottom: -1px;
+}
+
+
+.emisor .titulo {
+    text-align: center;
+    font-size: 10px;
+    color: #000000;
+    font-family: "Roboto";
+    margin-bottom: -1px;
+    font-weight: 500;
+}
+.cliente .titulo {
+  text-align: center;
+  font-size: 10px;
+  color: #000000;
+  font-family: "Roboto";
+  margin-bottom: -1px;
+  font-weight: 700;
+}
+
+
+.factura p {
+  text-align: end;
+  font-size: 6px;
+  color: #000000;
+  font-family: "Roboto";
+  margin-bottom: -1px;
+}
+
+.tabla_conceptos thead {
+  background-color: #000000;
+  color: #FFFFFF;     
+}
+
+.tabla_conceptos th {
+  color: #FFFFFF;   
+  text-align: center; 
+  padding: 0px;  
+}
+.tabla_conceptos th, .tabla_conceptos td {
+  border: 1.5px solid #CCCCCC; 
+}
+
+.tabla_comprobantes td, .tabla_importes td{
+  padding: 0px; 
+}
+
+
+.tabla-datos {
+  margin-left: 0;
+  border-collapse: separate; 
+  border-spacing: 20px; 
+}
+.tabla-datos td {
+  padding: 10px; 
+}
+
+
+
+
+.sellos {
+  border-collapse: collapse; 
+  margin-top: 20px;
+  margin-right: 200px;
+}
+.sellos td {
+  padding: 0px; 
+}
+
+.sellos pre {
+  margin: 0; 
+}
+
+.sellos img {
+  display: block; 
+  margin: 0;
+  margin-right: 20px;
+  align-content: start;
+}
+
+
+  

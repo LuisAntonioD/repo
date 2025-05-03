@@ -1,0 +1,411 @@
+<!--
+=========================================================
+* Soft UI Dashboard PRO - v1.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-dashboard-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    AdminTorre
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ae6cecf628.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.4" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link href="./assets/admintorre/admintorre.css" rel="stylesheet" />
+  <link href="./assets/css/sweetalert2.min.css" rel="stylesheet" />
+  <link href="./assets/js/plugins/typeahead/typeahead.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="g-sidenav-show bg-gray-100">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 "
+    id="sidenav-main">
+    <div class="sidenav-header">
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto h-auto max-height-vh-100 h-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav main-menu">
+
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg">
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
+      id="navbarBlur" data-scroll="true"></nav>
+    <!-- End Navbar -->
+
+    <div class="container-fluid mt-4">
+      <div class="row align-items-center">
+        <div class="col-lg-12 col-sm-12">
+          <div class="nav-wrapper position-relative end-0">
+            <div id="tabs">
+              <ul class="nav nav-pills nav-fill p-1" role="tablist">
+                <li class="nav-item" id="btntab1" onMouseOver="this.style.cursor='pointer'">
+                  <a class="nav-link mb-0 px-0 py-1 active" data-bs-target="#tabPorRecibir" data-bs-toggle="tab"
+                    role="tab" aria-selected="true">
+                    <span class="text-warning">
+                      <i class="fa-solid fa-ticket text-lg opacity-10" aria-hidden="true"></i>
+                    </span>
+                    Tickets Registrados
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid py-4">
+      <section class="py-3">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="tabPorRecibir" role="tabpanel" aria-labelledby="pills-home-tab">
+
+            <div class="row" id="tab1">
+              <div class="col-xl-12">
+                <div class="card">
+                  <div class="card-header p-3 pb-0">
+                    <div class="d-flex align-items-center">
+                      <div class="ms-3">
+                        <h5 class="font-weight-bolder mb-0">
+                            Tickets Registrados
+                        </h5>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive" >
+                      <table id="tablaTicketsRegistrados" class="table table-flush table-hover" width="100%">
+                          <thead>
+                              <tr>
+                                  <th>ID</th>
+                                  <th>Asunto</th>
+                                  <th>Descripci&oacute;n</th>
+                                  <th>Portal</th>
+                                  <th>Prioridad</th>
+                                  <th>Status</th>
+                                  <th>Fecha Creaci&oacute;n</th>
+                                  <th>Acciones</th>
+                              </tr>
+                          </thead>
+                            <tbody class="manita"></tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!-- end content-->
+                </div>
+                <!--  end card  -->
+              </div>
+              <!-- end col-md-12 -->
+            </div>
+          </div>
+          
+          
+
+         
+
+          
+          
+          
+        </div>
+      </section>
+
+      <footer class="footer pt-3"></footer>
+    </div>
+  </main>
+  <div class="fixed-plugin"></div>
+
+  <!-- Modal para asignar Prioridad-->
+  <div class="modal fade bd-example-modal-lg" id="myModalPrioridad" role="dialog">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body" id="modalBodyPrioridad">
+          <div class="cardinfo">
+
+          </div>
+          
+          
+        </div>
+        <div class="modal-footer">
+          <a class="btn bg-gradient-info" id="cambiarPrioridad">Cambiar Prioridad</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="mod_filtros" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-body p-0">
+          <div class="card card-plain">
+            <div class="card-header pb-0 text-left">
+                <div class="d-flex align-items-center">
+                  <div class="ms-3">
+                    <h5 class="font-weight-bolder">
+                        Filtros
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            <div class="card-body">
+              
+              
+              <div class="row">
+                  
+                <div class="col-md-4">
+                  <label for="cmb_portales">Portal</label>
+                  <div class="input-group mb-3">
+                    <select class="selectpicker col-md-12 obligatorio" data-style="select-with-transition"
+                        title="portales" data-style="select-osx select-with-transition" name="portales"
+                        id="portales" data-live-search="true" required="true" multiple>
+                    </select>
+                  </div>
+                </div>
+
+                  <div class="col-md-4">
+                    <label for="cmb_prioridad">Prioridad</label>
+                    <div class="input-group mb-3">
+                      <select class="selectpicker col-md-12 obligatorio" data-style="select-with-transition"
+                          title="Prioridad" data-style="select-osx select-with-transition" name="prioridad"
+                          id="prioridades" data-live-search="true" required="true" multiple>
+                      </select>
+                    </div>
+                  </div>
+                 
+                  <div class="col-md-4">
+                    <label for="cmb_status">Status</label>
+                    <div class="input-group mb-3">
+                      <select class="selectpicker col-md-12 obligatorio" data-style="select-with-transition"
+                          title="status" data-style="select-osx select-with-transition" name="status"
+                          id="status" data-live-search="true" required="true" multiple>
+                      </select>
+                    </div>
+                  </div>
+                  
+              </div>
+              <div class="row">
+                <div class="col-md-8">
+                  <button type="button" class="btn btn-icon-only bg-gradient-success" id="btn_aplicar_filtros" title="Filtrar" data-toggle="tooltip" data-bs-original-title="Filtrar" aria-label="Filtrar"><span class="btn-inner--icon"><i class="fas fa-check"></i></span></button>
+                  <button type="button" class="btn btn-icon-only bg-gradient-warning" id="btn_limpiar_filtros" title="Limpiar Filtros" data-toggle="tooltip" data-bs-original-title="Limpiar Filtros" aria-label="Limpiar Filtros"><span class="btn-inner--icon"><i class="fas fa-eraser"></i></span></button>
+                </div>
+                <div class="col-md-4">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+  
+
+
+  
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!--   Core JS Files   -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-select.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="./assets/js/plugins/choices.min.js"></script>
+  <script src="./assets/js/plugins/nouislider.min.js"></script>
+  <script src="./assets/js/plugins/dropzone.min.js"></script>
+
+ 
+  <script>
+    let imagenesBase64 = [];
+    let sharedLinks = []; // Arreglo temporal para almacenar los sharedLinks
+    let fileNamesdbx = [];   // Almacena los nombres de archivo retornados por la API
+    Dropzone.autoDiscover = false;
+    var drop = document.getElementById('dropzone');
+    var myDropzone = new Dropzone(drop, {
+        addRemoveLinks: true,
+        acceptedFiles: ".pdf", 
+        autoProcessQueue: false,
+        init: function() {
+            this.on("addedfile", function(file) {
+                let reader = new FileReader();
+                reader.onload = function(event) {
+                    let base64String = event.target.result;
+                    imagenesBase64.push({
+                        nombre: file.name.split('.')[0].trim().toLowerCase(),
+                        //base64: base64String //por si se ocupa despues el base64 descomentar esta linea y enviara en el array tambien el base64
+                    });
+                };  
+                reader.readAsDataURL(file);
+            });
+    
+            let myDropzone = this;
+            document.getElementById("btn-guardar-archivos").addEventListener("click", function(e) {
+                e.preventDefault();
+    
+                if (myDropzone.files.length == 0) {
+                    portal.showNotification('danger', 'ni ni-bell-55', 'Error', 'Por favor, agrega al menos un archivo antes de guardar.');
+                } else {
+                    let fileNames = imagenesBase64.map(file => file.nombre);
+                    let selectedRows = $("#tablaEsperaFirma tbody tr");
+                    let folios = [];
+                    let allRowData = [];
+                    
+                    selectedRows.each(function () {
+                        var row = $(this).closest("tr"); 
+                        var rowData = transitoAvaluos.tablaEsperaFirma.row(row).data(); 
+                        let folio = rowData.folio_administracion.trim().toLowerCase();
+                        folios.push(folio);
+                        allRowData.push(rowData);
+                    });
+    
+                    var archivosCoincide = imagenesBase64.filter(file => folios.includes(file.nombre));
+                    archivosCoincide.forEach(file => {
+                        let matchingRow = allRowData.find(row => row.folio_administracion.trim().toLowerCase() === file.nombre);
+                        if (matchingRow) {
+                            file._id = matchingRow._id;
+                        }
+                    });
+    
+                    if (archivosCoincide.length > 0) {
+                        let uploadPromises = archivosCoincide.map((file, index) => {
+                            let matchingFile = myDropzone.files.find(f => f.name.split('.')[0].trim().toLowerCase() === file.nombre);
+                            if (matchingFile) {
+                                const formData = new FormData();
+                                formData.append("file", matchingFile);
+                                return fetch(portal.serverUrl + 'upload/', {
+                                    method: "POST",
+                                    headers: {
+                                        'Authentication': portal.hash,
+                                        'processid': portal.processid,
+                                        'catalogid': portal.catalogid,
+                                        'procedureKey': portal.llaveTramite,
+                                        'catalogKey': portal.llaveCatalog,
+                                        'userid': portal.userid(),
+                                        'objName': false
+                                    },
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(result => {
+                                    if (result.sharedLink && result.fileName) {
+                                        console.log(result)
+                                        sharedLinks[index] = result.sharedLink; // Almacenar temporalmente el sharedLink
+                                        fileNamesdbx[index] = result.fileName; // Almacenar temporalmente el nombre del archivo
+                                        portal.showNotification('success', 'ni ni-bell-55', '&Eacute;xito', `Los documentos se han subido a la nube correctamente`);
+                                    } else {
+                                        console.log("Error ", result);
+                                    }
+                                })
+                                .catch(error => {
+                                    console.log("Error:", error);
+                                });
+                            }
+                        });
+    
+                        Promise.all(uploadPromises).then(() => {
+                            // Asignar los sharedLinks a los objetos file
+                            
+                            archivosCoincide.forEach((file, index) => {
+                                file.sharedLink = sharedLinks[index];
+                                file.fileName = fileNamesdbx[index];
+                            });
+
+    
+                            // Obtener solo los rowData de los folios que coinciden
+                            var rowDataCoincide = allRowData.filter(row => archivosCoincide.some(file => file.nombre === row.folio_administracion.trim().toLowerCase()));
+    
+                            myDropzone.removeAllFiles(); 
+                            setTimeout(function () {
+                                $("#myModalSubirArchivos").modal("hide");
+                                console.log(archivosCoincide)
+                                transitoAvaluos.enviarDigitalizados(rowDataCoincide)
+                                transitoAvaluos.subirArchivosDigitalizados(archivosCoincide);
+    
+                            }, 1000);
+                            myDropzone.processQueue();
+                            // Limpiar los arreglos temporales
+                            imagenesBase64 = [];
+                            sharedLinks = [];
+                            fileNamesdbx = []; 
+                        });
+                    } else {
+                        portal.showNotification('danger', 'ni ni-bell-55', 'Error', 'No hay archivos que coincidan con los folios seleccionados.');
+                    }
+                }
+            });
+        }
+    });
+  </script>
+
+
+
+  <!-- Kanban scripts -->
+  <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+  <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="./assets/js/plugins/sweetalert2.js"></script>
+
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/soft-ui-dashboard.js?v=1.0.4"></script>
+
+  <!-- Cookie control -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <!-- Loading Cover Plugin -->
+  <script src="./assets/js/plugins/jquery.mloading.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="./assets/js/plugins/jquery.validate.min.js"></script>
+
+  <!-- dataTables -->
+  <script src="./assets/js/plugins/jquery.dataTables.min.js"></script>
+
+    <script src="./assets/admintorre/config.js"></script>
+  <script src="./assets/admintorre/admintorre.js"></script>
+  <script src="./assets/js/shopping-cart.js"></script>
+  <script src="./assets/admintorre/admintorre-inits.js"></script>
+  <!--  Page functions -->
+
+
+  <script src="./assets/js/tickets_registrados.js"></script>
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+    integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+</body>
+
+</html>

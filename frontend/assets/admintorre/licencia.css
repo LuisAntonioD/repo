@@ -1,0 +1,82 @@
+.body {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 8px;
+    font-weight: normal;
+    color: #3C4858;
+}
+
+.text-mid {
+    font-size: 7px;
+}
+
+.text-small {
+    font-size: 5px;
+}
+
+.text-medium {
+    font-size: 7px;
+}
+
+.text-bigmid {
+    font-size: 9px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.mt-3 {
+    margin-top: 1rem !important;
+}
+
+.m-auto {
+    margin: auto !important;
+}
+
+.mb-1 {
+    margin-bottom: 5px !important;
+}
+
+.gray-bg {
+    font-weight: bold;
+    background-color: #eee;
+}
+
+.float-right {
+    float: right;
+}
+
+.text-big {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #333;
+}
+
+.text-danger {
+    color: #F00;
+    font-weight: bold;
+}
+
+.negritas {
+    font-weight: bold;
+}

@@ -1,0 +1,446 @@
+<!--
+=========================================================
+* Soft UI Dashboard PRO - v1.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-dashboard-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="./assets/img/apple-icon.png"
+    />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png" />
+    <title>AdminTorre</title>
+    <!--     Fonts and icons     -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+      rel="stylesheet"
+    />
+    <!-- Nucleo Icons -->
+    <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script
+      src="https://kit.fontawesome.com/ae6cecf628.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- CSS Files -->
+    <link
+      id="pagestyle"
+      href="./assets/css/soft-ui-dashboard.css?v=1.0.4"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/sweetalert2.min.css" rel="stylesheet" />
+    <link href="assets/admintorre/admintorre.css" rel="stylesheet" />
+  </head>
+
+  <body class="g-sidenav-show bg-gray-100">
+    <aside
+      class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3"
+      id="sidenav-main"
+    >
+      <div class="sidenav-header"></div>
+      <hr class="horizontal dark mt-0" />
+      <div
+        class="collapse navbar-collapse w-auto h-auto max-height-vh-100 h-100"
+        id="sidenav-collapse-main"
+      >
+        <ul class="navbar-nav main-menu"></ul>
+      </div>
+    </aside>
+    <main
+      class="main-content position-relative max-height-vh-100 h-100 border-radius-lg"
+    >
+      <!-- Navbar -->
+      <nav
+        class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky"
+        id="navbarBlur"
+        data-scroll="true"
+      ></nav>
+      <!-- End Navbar -->
+      <div class="container-fluid py-4">
+        <div class="row">
+          <div class="col-lg-11 col-xl-9 mx-auto">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-title">Datos de Usuario</h5>
+              </div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-3 text-center mb-auto">
+                    <div class="avatar w-100 position-relative">
+                      <img
+                        id="photo"
+                        src=""
+                        class="w-90 mt-auto border-radius-md shadow-sm user-avatar"
+                        alt="user image"
+                      />
+                      <a
+                        class="btn btn-icon-only bg-gradient-light position-absolute top-0 start-0 mt-n2 me-n2 btn-edit-avatar"
+                      >
+                        <i class="fas fa-edit top-0"></i>
+                      </a>
+                    </div>
+                    <form class="form-control dropzone hidden" id="dropzone">
+                      <div class="dz-message w-100 text-center">
+                        Arrastre hasta aqu&iacute; la nueva imagen o haga click
+                        para seleccionarla
+                      </div>
+                      <div class="fallback">
+                        <input name="file" type="file" />
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-9">
+                    <form
+                      id="form-profile"
+                      enctype="multipart/form-data"
+                      autocomplete="off"
+                    >
+                      <div class="row">
+                        <div>
+                          <h6 class="card-title">
+                            Informaci&oacute;n Personal
+                          </h6>
+                        </div>
+                        <div class="col-md-8">
+                          <div class="form-group border-bottom">
+                            <label class="bmd-label-floating">Email</label>
+                            <input
+                              type="email"
+                              class="form-control border-0 bg-white"
+                              name="email"
+                              id="email"
+                              disabled
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <label class="label">Sexo</label><br />
+                          <div
+                            class="form-check"
+                            style="display: -webkit-inline-flex !important"
+                          >
+                            <label class="form-check-label">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="sex"
+                                value="1"
+                              />
+                              Hombre
+                              <span class="circle osx">
+                                <span class="check"></span>
+                              </span>
+                            </label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <label class="form-check-label">
+                              <input
+                                class="form-check-input"
+                                type="radio"
+                                name="sex"
+                                value="2"
+                              />
+                              Mujer
+                              <span class="circle osx">
+                                <span class="check osx"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              ><sup>*</sup>Nombre</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              id="nombre"
+                              name="nombre"
+                              placeholder="ej. Miguel"
+                              minlength="2"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              ><sup>*</sup>Apellido Paterno</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              id="ap_paterno"
+                              name="ap_paterno"
+                              placeholder="ej. Perez"
+                              minlength="2"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Apellido Materno</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              id="ap_materno"
+                              name="ap_materno"
+                              placeholder="ej. Lopez"
+                            />
+                          </div>
+                        </div>
+                        <!--<div class="col-md-3">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Fecha de Nacimiento</label
+                            >
+                            <input
+                              type="date"
+                              class="form-control osx transparent"
+                              name="fecha_nacimiento"
+                              id="fecha_nacimiento"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              ><sup>*</sup>RFC</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              name="rfc"
+                              id="rfc"
+                              placeholder="ej. XAXX010101000"
+                              minlength="12"
+                              maxlength="13"
+                              required
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Tel&eacute;fono
+                              <small>(a 10 d&iacute;gitos)</small></label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              name="telefono"
+                              id="telefono"
+                              placeholder="ej. 9999999999"
+                              minlength="10"
+                              maxlength="10"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              ><sup>*</sup>Celular
+                              <small>(a 10 d&iacute;gitos)</small></label
+                            >
+                            <input
+                              type="text"
+                              class="form-control osx"
+                              name="celular"
+                              id="celular"
+                              placeholder="ej. 9999999999"
+                              minlength="10"
+                              maxlength="10"
+                              required
+                            />
+                          </div>
+                        </div>
+                      </div>-->
+                      <div>
+                        <h6 class="card-title">Cambiar Contrase&ntilde;a</h6>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Contrase&ntilde;a Anterior</label
+                            >
+                            <input
+                              type="password"
+                              class="form-control osx"
+                              name="prev-pass"
+                              id="prev-pass"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Nueva Contrase&ntilde;a <br /><small
+                                >(al menos 8 caracteres)</small
+                              ></label
+                            >
+                            <input
+                              type="password"
+                              class="form-control osx"
+                              name="new-pass"
+                              id="new-pass"
+                              minlength="8"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <label class="bmd-label-floating"
+                              >Confirmar Contrase&ntilde;a <br /><small
+                                >(al menos 8 caracteres)</small
+                              ></label
+                            >
+                            <input
+                              type="password"
+                              class="form-control osx"
+                              name="conf-pass"
+                              id="conf-pass"
+                              minlength="8"
+                            />
+                          </div>
+                        </div>
+                        <div class="col-12 text-end text-sm">
+                          <sup>*</sup>Campos requeridos
+                        </div>
+                      </div>
+
+                      
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer text-end">
+                <button type="submit" class="btn btn-fill btn-info btn-save">
+                  Guardar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer pt-3"></footer>
+      </div>
+    </main>
+    <div class="fixed-plugin"></div>
+
+    <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+    <!--   Core JS Files   -->
+    <script src="./assets/js/core/popper.min.js"></script>
+    <script src="./assets/js/core/bootstrap.min.js"></script>
+    <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script src="./assets/js/plugins/fullcalendar.min.js"></script>
+    <script src="./assets/js/plugins/dropzone.min.js"></script>
+
+    <!-- Kanban scripts -->
+    <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+    <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+    <script src="./assets/js/plugins/sweetalert2.js"></script>
+    <script src="./assets/js/plugins/cleave/cleave.min.js"></script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="./assets/js/soft-ui-dashboard.js?v=1.0.4"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/plugins/jquery.dataTables.min.js"></script>
+    <!-- Cookie control -->
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+    <!-- Forms Validations Plugin -->
+    <script src="./assets/js/plugins/jquery.validate.min.js"></script>
+    <!-- Loading Cover Plugin -->
+    <script src="./assets/js/plugins/jquery.mloading.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/plugins/bootstrap-select.js"></script>
+
+      <script src="./assets/admintorre/config.js"></script>
+  <script src="./assets/admintorre/admintorre.js"></script>
+    <script src="./assets/js/shopping-cart.js"></script>
+    <script src="./assets/admintorre/admintorre-inits.js"></script>
+    <!-- Page functions -->
+    <script src="./assets/js/perfil.js"></script>
+    <script
+      src="https://cdn.socket.io/4.5.0/socket.io.min.js"
+      integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      Dropzone.options.dropzone = {
+        paramName: "image",
+        maxFilesize: 20, // MB
+        acceptedFiles: "image/*",
+        addRemoveLinks: true,
+        url: portal.serverUrl + "userInfo",
+        headers: {
+          Authentication: portal.hash,
+          processid: portal.processid,
+          catalogid: portal.catalogid,
+          empresaid: portal.empresaid,
+          procedureKey: portal.llaveTramite,
+          catalogKey: portal.llaveCatalog,
+          userid: portal.userid(),
+          objName: false,
+        },
+        accept: function (file, done) {
+          swal({
+            title: "Realmente desea modificar su imagen de perfil?",
+            text: "",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonClass: "btn btn-success",
+            cancelButtonClass: "btn btn-danger",
+            confirmButtonText: "Modificar",
+            cancelButtonText: "Cancelar",
+            buttonsStyling: false,
+          }).then(
+            function () {
+              portal.showMaskLoading(
+                ".modal-content",
+                "Cargando imagen...",
+                true
+              );
+              done();
+            },
+            function (dismiss) {
+              // dismiss can be 'overlay', 'cancel', 'close', 'esc', 'timer'
+              if (dismiss === "cancel") {
+                dropzone.dropzone.removeAllFiles();
+              }
+            }
+          );
+        },
+      };
+    </script>
+  </body>
+</html>

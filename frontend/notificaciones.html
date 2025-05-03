@@ -1,0 +1,364 @@
+<!--
+=========================================================
+* Soft UI Dashboard PRO - v1.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-dashboard-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    AdminTorre
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ae6cecf628.js" crossorigin="anonymous"></script>
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.4" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
+  <link href="assets/admintorre/admintorre.css" rel="stylesheet" />
+  <link href="assets/css/sweetalert2.min.css" rel="stylesheet" />
+  <link href="assets/js/plugins/typeahead/typeahead.css" media="all" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="g-sidenav-show  bg-gray-100">
+  <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-3 " id="sidenav-main">
+    <div class="sidenav-header">
+    </div>
+    <hr class="horizontal dark mt-0">
+    <div class="collapse navbar-collapse  w-auto h-auto max-height-vh-100 h-100" id="sidenav-collapse-main">
+      <ul class="navbar-nav main-menu">
+        
+      </ul>
+    </div>
+  </aside>
+  <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg position-sticky mt-4 top-1 px-0 mx-4 shadow-none border-radius-xl z-index-sticky" id="navbarBlur" data-scroll="true">
+      
+    </nav>
+    <!-- End Navbar -->
+    <div class="container-fluid py-4">
+      <div class="row mt-4">
+        <div class="col-12">
+          <!-- <div class="row w-100">
+          </div> -->
+          <div class="card motor-content">
+            <!-- Card header -->
+            <div class="card-header pb-0">
+                <h5 class="mb-0 title-list">Notificaciones</h5>
+
+                <div class="row">
+
+                    <div class="col-10 mx-auto p-3 card-tramite">
+                        <div class="card mt-2">
+                            <div class="card-header">
+                                <div class="row">
+                                    <div class="col-6 d-flex flex-row">
+                                        <i class="fas fa-file-alt fa-2x me-3 my-auto"></i>
+                                        <h6 class="card-title my-auto">Datos de Notificaci&oacute;n</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body pt-0">
+
+								<form id="form_notificaciones" class="form-notificaciones" action="#">
+									<div class="row">
+										<div class="col-lg-12">
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group">
+														<label class="bmd-label-static" for="inmueble_tipo_valor">ENVIAR A:</label>
+														<div class="d-flex flex-row">
+															<div class="form-check mx-3">
+																<input class="form-check-input rad-enviar" type="radio"
+																	name="type_send" id="todos" value="1" required>
+																<label class="custom-control-label" for="todos">TODOS</label>
+															</div>
+															<div class="form-check mx-3">
+																<input class="form-check-input rad-enviar" type="radio"
+																	name="type_send" id="perfil" value="2">
+																<label class="custom-control-label" for="perfil">POR PERFIL</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row tipo-perfil">
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label class="bmd-label-static" for="tipo_usuario">TIPO DE USUARIO</label>
+												<select class="form-control osx selectpicker"
+													data-style="select-osx select-with-transition" data-live-search="true"
+													id="tipo_usuario" title="Seleccione el valuador" name="tipo_usuario"
+													data-nombre="tipo_usuario" multiple></select>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<div class="form-group">
+												<label class="bmd-label-static" for="usuarios">USUARIOS</label>
+												<select class="form-control osx selectpicker"
+													data-style="select-osx select-with-transition" data-live-search="true"
+													id="usuarios" title="Seleccione el valuador" name="usuarios"
+													data-nombre="usuarios" multiple></select>
+											</div>
+										</div>
+									</div>
+
+                  <div class="row">
+										<div class="col-lg-12">
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-group">
+														<label class="bmd-label-static" for="inmueble_tipo_valor">TIPO DE NOTIFICACI&Oacute;N:</label>
+														<div class="d-flex flex-row">
+															<div class="form-check mx-3">
+																<input class="form-check-input rad-tipo" type="radio"
+																	name="type_noti" id="banner" value="1" required>
+																<label class="custom-control-label" for="banner">BANNER</label>
+															</div>
+															<div class="form-check mx-3">
+																<input class="form-check-input rad-tipo" type="radio"
+																	name="type_noti" id="emergente" value="2">
+																<label class="custom-control-label" for="emergente">CUADRO EMERGENTE</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+                  <div class="row tipo-banner">
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="tipo_notificacion">TIPO</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="tipo_notificacion" title="Seleccione el tipo" name="tipo_notificacion" data-nombre="tipo_notificacion">
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="info">Info</option>
+                            <option value="success" selected>Success</option>
+                            <option value="danger">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+											</div>
+										</div>
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="icono">ICONO</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="icono" title="Seleccione el icono" name="icono" data-nombre="icono">
+													<option value="ni ni-air-baloon">Air baloon</option>
+													<option value="ni ni-bell-55" selected>Bell</option>
+													<option value="ni ni-check-bold">Check bold</option>
+													<option value="ni ni-chat-round">Chat round</option>
+													<option value="ni ni-email-83">Email</option>
+													<option value="ni ni-like-2">Like</option>
+													<option value="ni ni-send">Send</option>
+													<option value="ni ni-time-alarm">Time alarm</option>	
+												</select>
+											</div>
+										</div>
+                    <div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="posicion_vertical">POSICI&Oacute;N VERTICAL</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="posicion_vertical" title="Seleccione la posici&oacute;n vertical" name="posicion_vertical" data-nombre="posicion_vertical">
+													<option value="top" selected>Arriba</option>
+													<option value="bottom">Abajo</option>
+												</select>
+											</div>
+										</div>
+                    <div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="posicion_horizontal">POSICI&Oacute;N HORIZONTAL</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="posicion_horizontal" title="Seleccione la posici&oacute;n horizontal" name="posicion_horizontal" data-nombre="posicion_horizontal">
+													<option value="left">Izquierda</option>
+													<option value="center" selected>Centro</option>
+													<option value="right">Derecha</option>
+												</select>
+											</div>
+										</div>
+                    <div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="tamanio">TAMA&Ntilde;O</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="tamanio" title="Seleccione el tama&ntilde;o" name="tamanio" data-nombre="tamanio">
+													<option value="10">10</option>
+													<option value="20">20</option>
+													<option value="30">30</option>
+													<option value="40">40</option>
+													<option value="50" selected>50</option>
+													<option value="60">60</option>
+													<option value="70">70</option>
+													<option value="80">80</option>
+													<option value="90">90</option>
+													<option value="100">100</option>
+												</select>
+											</div>
+										</div>
+                    <div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="duracion">DURACI&Oacute;N</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="duracion" title="Seleccione la duraci&oacute;n" name="duracion" data-nombre="duracion">
+													<option value="permanente">Permanente</option>
+													<option value="5" selected>5</option>
+													<option value="10">10</option>
+													<option value="15">15</option>
+													<option value="20">20</option>
+													<option value="25">25</option>
+													<option value="30">30</option>
+												</select>
+											</div>
+										</div>
+									</div>
+
+                  <div class="row tipo-emergente">
+
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="tipo_notificacion_em">TIPO</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="tipo_notificacion_em" title="Seleccione el tipo" name="tipo_notificacion_em" data-nombre="tipo_notificacion_em">
+                            <option value="primary">Primary</option>
+                            <option value="secondary">Secondary</option>
+                            <option value="info">Info</option>
+                            <option value="success" selected>Success</option>
+                            <option value="error">Danger</option>
+                            <option value="warning">Warning</option>
+                            <option value="light">Light</option>
+                            <option value="dark">Dark</option>
+                        </select>
+											</div>
+										</div>
+
+										<div class="col-lg-4">
+											<div class="form-group">
+												<label class="bmd-label-static" for="duracion_em">DURACI&Oacute;N</label>
+												<select class="form-control osx selectpicker" data-style="select-osx select-with-transition" data-live-search="true"
+													id="duracion_em" title="Seleccione la duraci&oacute;n" name="duracion_em" data-nombre="duracion_em">
+													<option value="permanente" selected>Cerrado por Usuario</option>
+													<option value="5">5</option>
+													<option value="10">10</option>
+													<option value="15">15</option>
+													<option value="20">20</option>
+													<option value="25">25</option>
+													<option value="30">30</option>
+												</select>
+											</div>
+										</div>
+
+									</div>
+
+									<div class="row">
+                    <div class="col-lg-12">
+											<div class="form-group">
+												<label class="bmd-label-static" for="title_mensaje">TITULO DEL MENSAJE</label>
+												<textarea class="form-control" rows="1" id="title_mensaje" name="title_mensaje" required></textarea>
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="form-group">
+												<label class="bmd-label-static" for="text_mensaje">TEXTO DEL MENSAJE</label>
+												<textarea class="form-control" rows="4" id="text_mensaje" name="text_mensaje" required></textarea>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-lg-12 mt-3">
+											<div class="text-center">
+												<button type="submit" class="btn btn-info btn-enviar">Enviar Notificaci&oacute;n</button>
+											</div>
+										</div>
+									</div>
+								</form>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer pt-3  ">
+      </footer>
+    </div>
+  </main>
+  <div class="fixed-plugin">
+
+  </div>
+  <!--   Core JS Files   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/plugins/bootstrap-select.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/jquery.dataTables.min.js"></script>
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <script src="assets/js/plugins/choices.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="./assets/js/plugins/sweetalert2.js"></script>
+  <script src="./assets/js/plugins/cleave/cleave.min.js"></script>
+  <script src="./assets/js/plugins/cleave/addons/cleave-phone.mx.js"></script>
+    <!-- TypeAhead plugin -->
+    <script src="./assets/js/plugins/typeahead/typeahead.bundle.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/typeahead/bloodhound.js" type="text/javascript"></script>
+    <script src="./assets/js/plugins/handlebars/handlebars.min.js" type="text/javascript"></script>
+
+  <!-- Conversor numero a letras -->
+  <script src="./assets/js/plugins/numero_a_letras/NumeroALetras.js"></script>
+  <!-- Github buttons -->
+  <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/soft-ui-dashboard.js?v=1.0.4"></script>
+
+   <!-- Cookie control -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+  <!-- mloading -->
+  <script src="assets/js/plugins/jquery.mloading.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="assets/js/plugins/jquery.validate.min.js"></script>
+
+  <!-- Include the Quill library -->
+  <script src="assets/js/plugins/quill.min.js"></script>
+
+    <script src="./assets/admintorre/config.js"></script>
+  <script src="./assets/admintorre/admintorre.js"></script>
+  <script src="./assets/js/shopping-cart.js"></script>
+  <script src="./assets/admintorre/admintorre-inits.js"></script>
+  
+  <script src="assets/js/notificaciones.js"></script>
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

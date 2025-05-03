@@ -1,0 +1,377 @@
+<!--
+=========================================================
+* Soft UI Dashboard PRO - v1.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/soft-ui-dashboard-pro 
+* Copyright 2021 Creative Tim (https://www.creative-tim.com)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="iso-8859-1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/logo_scsw_small.png">
+  <link rel="icon" type="image/png" href="./assets/img/logo_scsw_small.png">
+  <title>
+    AdminTorre
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/ae6cecf628.js" crossorigin="anonymous"></script>
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-ui-dashboard.css?v=1.0.4" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/sweetalert2.css" rel="stylesheet" />
+  <link href="assets/admintorre/admintorre.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100">
+  <div class="container position-sticky z-index-sticky top-0">
+    <div class="row">
+      <div class="col-12">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg blur blur-rounded position-absolute top-0 z-index-1 start-0 end-0 shadow-none my-3  navbar-transparent mt-4">
+          <div class="container">
+            <a class="d-lg-none d-block navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="../../../pages/dashboards/default.html">
+              <span class="text-osx-dark">Trasl</span><span class="text-osx-alt">@</span><span class="text-osx-dark">net</span>
+            </a>
+            <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon mt-2">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse w-100 pt-3 pb-2 py-lg-0 flex-row-reverse" id="navigation">
+              
+              
+              <a class="bg-gradient-default ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="registro.html">
+                <div class="d-flex">
+                  <div class="icon h-10 me-3 d-flex mt-1">
+                    <i class="fas fa-user-plus text-secondary"></i>
+                  </div>
+                  <div class="w-100 d-flex align-items-center justify-content-between">
+                    <div>
+                      <p class="dropdown-header text-dark p-0">Registro</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <a class="bg-gradient-default ps-2 d-flex justify-content-between cursor-pointer align-items-center" href="login.html">
+                <div class="d-flex">
+                  <div class="icon h-10 me-3 d-flex mt-1">
+                    <i class="fas fa-sign-in-alt text-secondary"></i>
+                  </div>
+                  <div class="w-100 d-flex align-items-center justify-content-between">
+                    <div>
+                      <p class="dropdown-header text-dark p-0">Login</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+              <ul class="navbar-nav navbar-nav-hover mx-auto">
+                <li class="nav-item">
+                </li>
+                <li class="nav-item dropdown dropdown-hover mx-2">
+                  <div class="dropdown-menu dropdown-menu-animation dropdown-md dropdown-md-responsive p-3 border-radius-lg mt-0 mt-lg-3" aria-labelledby="dropdownMenuBlocks">
+                    <!-- responsive -->
+                    <div class="row d-lg-none">
+                      <div class="col-md-12">
+                        
+                        
+                        <a class="py-2 ps-3 border-radius-md" href="registro.html">
+                          <div class="d-flex">
+                            <div class="icon h-10 me-3 d-flex mt-1">
+                              <i class="fas fa-user-plus text-secondary"></i>
+                            </div>
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <p class="dropdown-header text-dark p-0">Registro</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                        <a class="py-2 ps-3 border-radius-md" href="login.html">
+                          <div class="d-flex">
+                            <div class="icon h-10 me-3 d-flex mt-1">
+                              <i class="fas fa-sign-in-alt text-secondary"></i>
+                            </div>
+                            <div class="w-100 d-flex align-items-center justify-content-between">
+                              <div>
+                                <p class="dropdown-header text-dark p-0">Login</p>
+                              </div>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <!-- End Navbar -->
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content  mt-0">
+    <div class="page-header align-items-start min-vh-85 pt-5 pb-11 m-3 border-radius-lg login-bg">
+      <span class="mask bg-gradient-dark opacity-3"></span>
+    </div>
+    <div class="container">
+        <div class="position-absolute top-3 start-0 w-100 pt-5">
+            <div class="col-10 m-auto">
+                <div class="multisteps-form mb-5">
+                    <!--progress bar-->
+                    <div class="row">
+                        <div class="col-12 col-lg-10 col-xl-8 mx-auto my-3 my-lg-1 pt-3 bg-white border-radius-xl">
+                            <div class="row">
+                                <div class="col-4 mx-auto my-auto">
+                                    <img src="./assets/img/scsoftworks-v1.png" class="w-100">
+                                </div>
+                                <!--<div class="col-4 mx-auto">
+                                  <div class="row w-100">
+                                    <div class="col-12">
+                                      <img src="./assets/img/scsoftworks-v1.png" class="w-100">
+                                    </div>
+                                  </div>
+                                </div>-->
+                            </div>
+                            <div class="row">
+                                <div class="multisteps-form__progress">
+                                    <button class="multisteps-form__progress-btn js-active" type="button" title="Registro"><span>Registro</span></button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Validaci&oacute;n">Validaci&oacute;n</button>
+                                    <button class="multisteps-form__progress-btn" type="button" title="Confirmaci&oacute;n">Confirmaci&oacute;n</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--form panels-->
+                    <div class="row">
+                        <div class="col-12 col-lg-10 col-xl-8 mx-auto my-3 px-0">
+                            <form class="multisteps-form__form mb-8 form-registro">
+                                <!--single form panel-->
+                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white js-active" data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder mb-0">Comencemos con la informaci&oacute;n b&aacute;sica</h5>
+                                    <p class="mb-0 text-sm">Por favor llena los datos solicitados</p>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="row">
+                                                <div class="col-md-3 d-flex flex-column">
+                                                    <div class="avatar avatar-xxl my-auto align-self-center">
+                                                        <img src="./assets/img/default-avatar.png" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="col-12">
+                                                        <label>* Nombre</label>
+                                                        <input class="multisteps-form__input form-control" id="firstname" name="firstname" type="text" placeholder="ej. Miguel" minlength="2" />
+                                                    </div>
+                                                    <div class="col-12 mt-3 mt-sm-0">
+                                                        <label>* Apellido Paterno</label>
+                                                        <input class="multisteps-form__input form-control" id="lastname" name="lastname" type="text" placeholder="ej. Perez" minlength="2" />
+                                                    </div>
+                                                    <div class="col-12 mt-3 mt-sm-0">
+                                                        <label>* Apellido Materno</label>
+                                                        <input class="multisteps-form__input form-control" id="lastnameM" name="lastnameM" type="text" placeholder="ej. Lopez" />
+                                                    </div>
+                                                    <div class="col-12 mt-3 mt-sm-0">
+                                                        <label>* Email</label>
+                                                        <input class="multisteps-form__input form-control" id="email" name="email" type="email" placeholder="ej. miguel@dominio.com" />
+                                                    </div>
+                                                    <div class="col-12 mt-1 mt-sm-0 text-end">
+                                                        <span class="text-sm">* Campos obligatorios</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="button-row d-flex mt-4">
+                                            <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Siguiente</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Ingrese el c&oacute;digo de confirmaci&oacute;n enviado a su correo</h5>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="row">
+                                                <div class="col-3 d-flex flex-column">
+                                                    <div class="avatar avatar-xxl my-auto align-self-center">
+                                                        <img src="./assets/img/illustrations/danger-chat-ill.png" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-9">
+                                                    <div class="col-12 mt-3">
+                                                        <div class="col-6 mr-auto">
+                                                            <label>C&oacute;digo de confirmaci&oacute;n</label>
+                                                            <input class="multisteps-form__input form-control" id="confirmationcode" name="confirmationcode" type="number" placeholder="ej. 111111" minlength="6" maxlength="6" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-3">
+                                                        <div class="col text-end">
+                                                            <h6 class="cursor-pointer lnk-reenviar-correo"><i class="fas fa-paper-plane"></i>&nbsp;&nbsp;Reenviar correo</h6>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="button-row d-flex mt-4">
+                                                <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button">Anterior</button>
+                                                <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-next" type="button" title="Next">Siguiente</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--single form panel-->
+                                <div class="card multisteps-form__panel p-3 border-radius-xl bg-white" data-animation="FadeIn">
+                                    <h5 class="font-weight-bolder">Complete la informaci&oacute;n para terminar el proceso.</h5>
+                                    <div class="multisteps-form__content">
+                                        <div class="row mt-3">
+                                            <div class="col-3 d-flex flex-column">
+                                                <div class="avatar avatar-xxl my-auto align-self-center">
+                                                    <img src="./assets/img/default-avatar.png" />
+                                                </div>
+                                            </div>
+                                            <div class="col-9">
+                                                <div class="row">
+                                                    
+                                                   
+                                                    <div class="col-12 col-xl-6 mt-3 mt-sm-0">
+                                                        <label>* Contrase&ntilde;a (al menos 8 caracteres)</label>
+                                                        <input class="multisteps-form__input form-control" id="password" name="password" type="password" minlength="8" />
+                                                    </div>
+                                                    <div class="col-12 col-xl-6 mt-3 mt-sm-0">
+                                                        <label>* Confirmar contrase&ntilde;a (al menos 8 caracteres)</label>
+                                                        <input class="multisteps-form__input form-control" id="confirmpass" name="confirmpass" type="password" minlength="8" />
+                                                    </div>
+                                                    <div class="col-12 col-xl-6 mt-3 mt-sm-0">
+                                                        <label>Sexo</label>
+                                                        <div class="d-flex flex-row">
+                                                            <input type="hidden" name="sexo" id="sexo" value="1">
+                                                            <div class="form-check mx-3">
+                                                                <input class="form-check-input radsexo" type="radio" name="radsexo" id="customRadio1" value="1" checked>
+                                                                <label class="custom-control-label" for="customRadio1">Masculino</label>
+                                                            </div>
+                                                            <div class="form-check mx-3">
+                                                                <input class="form-check-input radsexo" type="radio" name="radsexo" id="customRadio2" value="2">
+                                                                <label class="custom-control-label" for="customRadio2">Femenino</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 col-xl-6 mt-3 mt-sm-0">
+                                                        <div class="form-check form-switch mt-3 float-end">
+                                                            <input class="form-check-input flag_tyc" type="checkbox" name="flag_tyc" id="flexSwitchCheckDefault" value="1">
+                                                            <label class="form-check-label" for="flexSwitchCheckDefault">* Acepto los </label><span class="text-sm font-weight-normal cursor-pointer tyc" data-container="body" data-bs-toggle="popover" data-bs-placement="left" data-bs-content="Todos los t&eacute;rminos y condiciones de este asunto"><i>T&eacute;rminos y Condiciones</i></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12 mt-1 mt-sm-0 text-end">
+                                                        <span class="text-sm">* Campos obligatorios</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="button-row d-flex mt-4 col-12">
+                                                <button class="btn bg-gradient-light mb-0 js-btn-prev" type="button">Anterior</button>
+                                                <button class="btn bg-gradient-dark ms-auto mb-0 js-btn-end" type="button">Finalizar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------- START FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+    <footer class="footer py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mb-4 mx-auto text-center">
+            <a class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2 osx_link">
+              <img src="assets/img/logo_scsw_small.png">&nbsp;S&C Softworks
+            </a>
+            <a class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2 osx_link">
+              <i class="fas fa-user-circle"></i>&nbsp;Acerca de Nosotros
+            </a>
+            <a class="text-secondary me-xl-5 me-3 mb-sm-0 mb-2 cursor-pointer contact_link">
+              <i class="fas fa-at"></i>&nbsp;Contacto
+            </a>
+          </div>
+          <div class="col-lg-8 mx-auto text-center mb-4 mt-2">
+            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+              <span class="text-lg fab fa-twitter"></span>
+            </a>
+            <a href="javascript:;" target="_blank" class="text-secondary me-xl-4 me-4">
+              <span class="text-lg fab fa-facebook"></span>
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-8 mx-auto text-center mt-1">
+            <p class="mb-0 text-secondary">
+              &copy;
+              <script>
+                document.write(new Date().getFullYear())
+              </script>, Created by
+              <a class="osx_link">S&C Softworks S.A. de C.V.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <!-- -------- END FOOTER 3 w/ COMPANY DESCRIPTION WITH LINKS & SOCIAL ICONS & COPYRIGHT ------- -->
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.min.js"></script>
+  <script src="./assets/js/plugins/smooth-scrollbar.min.js"></script>
+  <!-- Kanban scripts -->
+  <script src="./assets/js/plugins/dragula/dragula.min.js"></script>
+  <script src="./assets/js/plugins/jkanban/jkanban.js"></script>
+  <script src="./assets/js/plugins/sweetalert2.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+    </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.4"></script>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- Cookie control -->
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="./assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Loading Cover Plugin -->
+  <script src="./assets/js/plugins/jquery.mloading.js"></script>
+  
+    <script src="./assets/admintorre/config.js"></script>
+  <script src="./assets/admintorre/admintorre.js"></script>
+  <!-- Login page functions -->
+  <script src="./assets/js/registro.js"></script>
+  <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+  </body>
+  
+  </html>
